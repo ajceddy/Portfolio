@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PYTHON - Assy J-C EDDY</title>
+
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Code&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <header class="header-container">
+                <label for="check" class="logo"><a href="index.html">AJC EDDY</a></label>
+                <nav>
+                    <ul class="menu">
+                        <li><a href="downloadcv.html">Download CV</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <!-- Dark Mode Toggle -->
+                        <div class="theme-toggle">
+                            <input type="checkbox" id="theme-switch">
+                            <label for="theme-switch" class="toggle-label">
+                                <i class="fas fa-moon"></i> Dark Mode
+                            </label>
+                        </div>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </header>
+
+    <div class="maindiv">
+        <!-- Main title -->
+        <div class="titlediv1">
+            <h1 class="titleh1">PYTHON Skills</h1>
+        </div>
+<!-- Image section -->
+<div class="body-image">
+    <img src="4.jpg" alt="Portfolio Image">
+</div>
+
+<!-- Body text section -->
+<div class="body-text">
+
+
+    <p>As a skilled software developer, I possess extensive experience in Python, a versatile and powerful programming language that enables me to build robust applications across various domains. My expertise includes:
+        <br>
+        <br>
+
+        Core Python Proficiency: Strong understanding of Python syntax, data structures, and programming paradigms, including object-oriented and functional programming, which allows for writing clean and efficient code. <br>
+        <br>
+        
+        Web Development: Experience with frameworks such as Django and Flask, enabling the development of scalable web applications with well-structured back-ends and seamless integration of front-end technologies. <br>
+        <br>
+        
+        Data Analysis and Visualization: Proficient in libraries such as Pandas, NumPy, and Matplotlib, allowing for data manipulation, analysis, and visualization to derive actionable insights and support data-driven decision-making. <br>
+        <br>
+        
+        Automation and Scripting: Skilled in creating scripts to automate repetitive tasks, improving workflow efficiency and reducing manual effort across various processes. <br>
+        <br>
+        
+        Machine Learning and AI: Familiarity with libraries like TensorFlow and Scikit-learn, enabling the development of predictive models and machine learning applications to solve complex problems. <br>
+        <br>
+        
+        With a focus on best practices and a strong commitment to continuous learning, I leverage Python's capabilities to deliver high-quality solutions that meet the demands of modern software development.
+    </p>
+</div>
+</div>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+        <!-- Footer Contact Details -->
+        <div class="footer-contact">
+            <h2>Contact Me</h2>
+            <p><strong>Name:</strong> Assy Jean-Claude EDDY</p>
+            <p><strong>Phone:</strong> +44 7 42 42 42 793</p>
+            <p><strong>Email:</strong> <a href="mailto:ajceddy@gmail.com">ajceddy@gmail.com</a></p>
+            <a aria-label="Chat on WhatsApp" href="https://wa.me/00447424242793"> <img alt="Chat on WhatsApp" src="WhatsAppButtonGreenLarge.png"/><a/>
+        </div>
+
+        <!-- Footer Contact Form -->
+        <div class="footer-form">
+            <h2>Get In Touch</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Assy Jean-Claude EDDY. All rights reserved.</p>
+    </div>
+</footer>
+
+    <!-- Script for dark mode functionality -->
+    <script>
+        const themeSwitch = document.getElementById('theme-switch');
+        themeSwitch.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode'); // Toggle dark mode class
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light'); // Save the theme preference
+        });
+
+        // Load the preferred theme on page load
+        window.onload = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode'); // Apply dark mode if saved
+                themeSwitch.checked = true; // Check the toggle
+            }
+        };
+    </script>
+</body>
+</html>
+
+    
+</body>
+</html>
