@@ -1,0 +1,514 @@
+/* Global reset: Removes default margin and padding, ensures box model consistency */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    transition: all 0.5s ease-out; /* Smooth transition for all properties */
+}
+
+/* Body styles: Sets font, background, and positioning */
+body {
+    font-family: Cascadia Code; /* Sets a default font */
+    line-height: 1.6; /* Increases readability */
+    color: black; /* Default text color */
+    background: linear-gradient(to right, #071c39, #164e7a); /* Gradient background */
+    position: relative; /* Allows absolute positioning of child elements */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Global dark mode styles: Overrides styles for dark mode */
+body.dark-mode {
+    background: linear-gradient(to right, #1c1c1c, #333); /* Dark mode gradient */
+    color: chartreuse; /* Light text color for contrast */
+}
+
+/* Header styles: Applies dark mode styles to the header */
+body.dark-mode header {
+    background-color: #111; /* Dark background for header */
+}
+
+body.dark-mode .body-text{
+
+    color: chartreuse;
+}
+
+body.dark-mode .body-text h1{
+
+    color:#ffa500;
+}
+
+body.dark-mode .maindiv{
+    color: chartreuse; /* Light color for links */
+    background-color: #333;
+    font-family: Cascadia Code;    
+}
+
+/* Card styles in dark mode */
+body.dark-mode .card {
+    background-color: #060101; /* Dark card background */
+    box-shadow: 0 4px 8px darkgray; /* Soft shadow for depth */
+    color: chartreuse; /* Dark mode text color*/
+}
+
+body.dark-mode .cardtext h1 {
+    color: #ffa500; /* Highlighted color for card titles */
+}
+
+/* Navigation links in dark mode */
+body.dark-mode nav ul li a {
+    color: chartreuse; /* Light color for links */
+    font-family: Cascadia Code,
+}
+
+
+/* Footer styles in dark mode */
+body.dark-mode footer {
+    background-color: #111; /* Dark footer background */
+    color: #e4e4e4; /* Light text color */
+   
+}
+
+/* Animation for rotation effect */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg); /* Starting state */
+    }
+    100% {
+        transform: rotate(360deg); /* Ending state */
+    }
+}
+
+/* Gradient background for the main content */
+.gradient {
+    position: absolute; /* Position behind content */
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    z-index: -1; /* Send to back */
+    width: 100%; 
+    height: 100%; 
+    filter: blur(5px); /* Optional blur effect */
+    background-image: linear-gradient(hsl(222, 84, 60, 100%), hsl(164, 79, 71)); /* Gradient colors */
+    animation: rotate 50s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite; /* Infinite rotation */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Non-uniform border radius */
+}
+
+/* Header styles */
+header {
+    background-color: rgba(6, 71, 54, 0.9); /* Semi-transparent header */
+    padding: 10px 0; /* Vertical padding */
+    position: sticky; /* Stick to the top on scroll */
+    top: 0; /* Positioning from the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure above other content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+header a {text-decoration: none; }
+
+/* Header container: Center and space elements */
+.header-container {
+    max-width: 1200px; /* Max width for large screens */
+    margin: auto; /* Center horizontally */
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center vertically */
+}
+
+/* Logo styles */
+.logo {
+    color: orange; /* Orange text color */
+    font-size: 30px; /* Large font size */
+    font-family: 'Sixtyfour Convergence', sans-serif; /* Custom font */
+}
+
+/* Navigation styles */
+nav {
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+}
+
+nav ul {
+    list-style: none; /* Remove default list styling */
+    display: flex; /* Horizontal layout */
+}
+
+nav ul li {
+    margin-left: 20px; /* Spacing between navigation items */
+}
+
+nav ul li a {
+    color: white; /* White text for links */
+    text-transform: uppercase; /* Uppercase text */
+    padding: 10px 15px; /* Padding around links */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    border-radius: 5px; /* Rounded corners */
+}
+
+nav ul li a:hover {
+    background-color: #ff7700; /* Highlight on hover */
+}
+
+div button{
+    color: white; /* White text for links */
+    background-color: green;
+    text-transform: uppercase; /* Uppercase text */
+    padding: 10px 15px; /* Padding around links */
+    margin: 5px 5px;
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    border-radius: 5px; /* Rounded corners */
+}
+
+div button:hover{
+    background-color: #ff7700; /* Highlight on hover */
+    align-items: center;
+
+}
+
+/* Theme toggle styles */
+.theme-toggle {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    margin-left: 20px; /* Space from other items */
+}
+
+.toggle-label {
+    cursor: pointer; /* Pointer cursor on hover */
+    color: white; /* White color for the label */
+    margin-left: 5px; /* Space between icon and label */
+}
+
+/* Responsive styles for mobile view */
+.checkbtn {
+    display: none; /* Hidden by default */
+}
+
+@media (max-width: 768px) {
+    .gradient {
+        --size: 500px; /* Adjust size for mobile */
+    }
+    .checkbtn {
+        display: block; /* Show on mobile */
+        color: white; /* White color for the button */
+        font-size: 30px; /* Large font size */
+    }
+    nav ul {
+        display: none; /* Hide navigation by default */
+        position: absolute; /* Absolute positioning */
+        top: 70px; /* Below the header */
+        right: 0; /* Align to the right */
+        background-color: rgba(6, 71, 54, 0.9); /* Semi-transparent background */
+        width: 100%; /* Full width */
+        text-align: center; /* Center align items */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    #check:checked ~ ul {
+        display: block; /* Show navigation when checkbox is checked */
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 20px 0; /* Vertical spacing for stacked items */
+    }
+}
+
+/* Main content styles */
+.maindiv {
+    color: rgb(6, 11, 1);
+    position: relative; /* Ensure stacking order */
+    z-index: 1; /* Higher than the gradient */
+    max-width: 1600px;  /*Max width for large screens */
+    margin-top: 5px; /* Top margin of 5px */
+    margin-left: auto; /* Center alignment */
+    margin-right: auto; /* Center alignment */
+    margin-bottom: 40px; /* Bottom margin of 40px */
+    padding: 20px; /* Padding inside the main div */
+    background-color: white; /* white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+
+/* Title container styles */
+.titlediv1 {
+    text-align: center; /* Center align text */
+    margin-bottom: 30px; /* Spacing below title */
+}
+
+/* Title styles */
+.titleh1 {
+    font-size: 3em; /* Large title size */
+    color: #064636; /* Dark green color */
+    font-family: 'Sixtyfour Convergence', sans-serif; /* Custom font */
+    font-weight: bold; /* Bold text */
+}
+
+/* Image styles */
+.body-image img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Spacing below image */
+}
+
+/* Body text styles */
+.body-text {
+    font-size: 1.1em; /* Slightly larger text */
+    color:black; /* Default text color */
+    text-align: center; /* Center align text */
+    margin-bottom: 40px; /* Spacing below text */
+    line-height: 1.8; /* Increased line height for readability */
+}
+
+/* Card layout styles */
+.card-container {
+    display: grid; /* Grid layout for cards */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around card container */
+}
+
+/* Card styles */
+.card {
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Card image styles */
+.card img {
+    width: 100%; /* Full width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Card text styles */
+.cardtext {
+    padding: 20px; /* Padding around text */
+   
+}
+
+/* Footer styling */
+.footer {
+    background-color: rgba(6, 71, 54, 0.9);
+    color: #fff;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-contact, .footer-form {
+    width: 45%;
+}
+
+.footer-contact h2, .footer-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.footer-contact p, .footer-form p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-contact a {
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.footer-form form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+ 
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+.footer img{
+    height: 40px;
+    width: 189px;
+}
+
+.form-group input::placeholder, .form-group textarea::placeholder {
+    color: #aaa;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ff4500;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #555;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-contact, .footer-form {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-contact p {
+        margin-bottom: 15px;
+    }
+}
+
+/* Contact section styling */
+.contact-section {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.contact-title h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contact-title p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.contact-info, .contact-form {
+    width: 48%;
+}
+
+.contact-info h2, .contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #ff6347;
+}
+
+.contact-info a {
+    color: #ff6347;
+    text-decoration: none;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Cascadia Code', monospace;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.submit-btn {
+    padding: 12px 20px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ff4500;
+}
+
+/* Responsive Contact Section */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
