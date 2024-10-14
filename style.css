@@ -212,6 +212,10 @@ div button:hover{
         list-style: none;
         margin: 20px 0; /* Vertical spacing for stacked items */
     }
+
+    h1 {
+        font-size: 1.8rem; /* Smaller font size for smaller screens */
+    }
 }
 
 /* Main content styles */
@@ -239,16 +243,17 @@ div button:hover{
 
 /* Title styles */
 .titleh1 {
-    font-size: 3em; /* Large title size */
+    font: size 5rem; /* Large title size */
     color: #064636; /* Dark green color */
     font-family: 'Sixtyfour Convergence', sans-serif; /* Custom font */
     font-weight: bold; /* Bold text */
 }
 
 /* Image styles */
-.body-image img {
+.body-image {
+    background-image: url(AdobeStock_373478211.jpg);
     width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
+    height: 960px; /* Maintain aspect ratio */
     border-radius: 10px; /* Rounded corners */
     margin-bottom: 20px; /* Spacing below image */
 }
@@ -256,7 +261,7 @@ div button:hover{
 /* Body text styles */
 .body-text {
     font-size: 1.1em; /* Slightly larger text */
-    color:black; /* Default text color */
+    color:white; /* Default text color */
     text-align: center; /* Center align text */
     margin-bottom: 40px; /* Spacing below text */
     line-height: 1.8; /* Increased line height for readability */
@@ -403,16 +408,12 @@ div button:hover{
     }
 
     .footer-contact, .footer-form {
-        width: 480px;
+        width: 100%;
         text-align: center;
     }
 
     .footer-contact p {
         margin-bottom: 15px;
-    }
-
-    .container h1 {
-        font-size: 1.8rem; /* Smaller font size for smaller screens */
     }
 }
 
