@@ -403,7 +403,7 @@ div button:hover{
     }
 
     .footer-contact, .footer-form {
-        width: 100%;
+        width: 480px;
         text-align: center;
     }
 
@@ -512,7 +512,7 @@ div button:hover{
     }
 
     .contact-info, .contact-form {
-        width: 460px;
+        width: 100%;
         margin-bottom: 40px;
     }
 }
