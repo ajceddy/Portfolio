@@ -621,7 +621,7 @@ div button:hover{
     }
 
     .titleh1 {
-        font-size: calc(1.5rem + 1vw); /* Further reduce font size for smaller screens */
+        font-size: calc(1rem + 0.5vw); /* Further reduce font size for smaller screens */
         padding-top: 10px; /* Further reduce padding */
     }
 
