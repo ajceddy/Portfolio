@@ -621,12 +621,12 @@ div button:hover{
     }
 
     .titleh1 {
-        font-size: 1.5rem; /* Further reduce font size for smaller screens */
+        font-size: 1rem; /* Further reduce font size for smaller screens */
         padding-top: 10px; /* Further reduce padding */
     }
 
     .body-text {
-        font-size: 1rem; /* Smaller font size for body text */
+        font-size: 0.5rem; /* Smaller font size for body text */
         padding: 5%; /* Reduce padding to fit text better */
     }
 }
