@@ -49,37 +49,31 @@
     <!-- Main Content Section -->
     <div class="maindiv">
 
-        <!--Image, title and soft dev container-->
-        <!-- Image section -->
-        <div class="body-image">
-            <!-- Main title -->
-            <div class="titlediv1">
-                <h1 class="titleh1">Assy J-C EDDY's <br> portfolio</h1> 
-            </div>
-            <!-- Body text section -->
-            <div class="body-text">
-                <h1>SOFTWARE DEVELOPER</h1>
-                <br>
-                <p>
-                    I am Assy Jean-Claude Eddy, a Full-Stack Software Developer with a proven track record of delivering innovative, scalable, and high-performance solutions. With many years of hands-on experience in both front-end and back-end development, I specialize in building dynamic applications that meet modern business needs.
-                </p>
-                <br>
-                <p>
-                    I am proficient in a wide range of technologies, including JavaScript frameworks (React, Angular, Vue), server-side development (Node.js, Python/Django), and cloud services (AWS, Azure). Whether you're looking for web, mobile, or custom software, I combine technical expertise with a keen eye for design and user experience to create solutions that stand out.
-                </p>
-                <br>
-                <p>
-                    Explore my portfolio to see how I’ve helped clients achieve their digital transformation goals. Let’s work together to turn your vision into reality.
-                </p>
-                <br>
-
-            </div>
-
-
-         </div>
-
+        <!-- Main container for the image, title, and text section -->
+<div class="body-image">
+    <!-- Title container -->
+    <div class="titlediv1">
+        <!-- Main title of the page -->
+        <h1 class="titleh1">Assy J-C EDDY's <br> SOFTWARE DEVELOPER</h1> 
+    </div>
+    
+    <!-- Body text section -->
+    <div class="body-text" id="body-text-index">
+        <!-- First paragraph introducing the developer -->
+        <p>
+            I’m Assy Jean-Claude Eddy, a Full-Stack Software Developer skilled in building innovative, scalable, and high-performance applications. With expertise in both front-end (React, Angular, Vue) and back-end development (Node.js, Python/Django), I deliver solutions that meet modern business needs. Whether it’s web, mobile, or custom software, I blend technical expertise with a focus on design and user experience to create impactful results.
+            <br>
+            <br>
+            Check out my portfolio to see how I’ve helped clients achieve their goals. Let’s bring your vision to life.
+        </p>
+        
+        <!-- Line break to add spacing at the bottom of the section -->
+        <br>
+    </div>
+</div>
             
     </div>
+    <div>
 
         <!-- Core Skills Section -->
         <div class="titlediv1">
@@ -183,21 +177,20 @@
 
     <!-- Footer Section -->
     <footer class="footer">
-        <div class="container">
-            <!-- Footer Contact Details -->
-            <div class="footer-contact">
-                <h2>Contact Me</h2>
-                <p><strong>Name:</strong> Assy Jean-Claude EDDY</p>
-                <p><strong>Phone:</strong> +44 7 42 42 42 793</p>
-                <p><strong>Email:</strong> <a href="mailto:ajceddy@gmail.com">ajceddy@gmail.com</a></p>
-                <!-- Elfsight Widget for additional contact options -->
-                <script src="https://static.elfsight.com/platform/platform.js" async></script>
-                <div class="elfsight-app-10d3ab95-1a10-405e-a13c-2d31a8f231d9" data-elfsight-app-lazy></div>
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Contact Details</h2>
+                <p><i class="fas fa-user"></i> <strong>Name:</strong> Assy Jean-Claude EDDY</p>
+                <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +44 7 42 42 42 793</p>
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:ajceddy@gmail.com">ajceddy@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Wolverhampton, United Kingdom</p>
+                
             </div>
 
-            <!-- Footer Contact Form -->
-            <div class="footer-form">
-                <h2>Get In Touch</h2>
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send a Message</h2>
                 <form action="#" method="POST">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
@@ -206,7 +199,7 @@
                         <input type="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
