@@ -244,6 +244,35 @@ div button:hover{
     }
 }
 
+/* Responsive styles for <h1> elements */
+h1 {
+    font-size: 3rem; /* Default font size for h1 */
+    line-height: 1.2; /* Line height for better readability */
+    text-align: center; /* Center align the h1 */
+    margin-bottom: 20px; /* Margin below h1 */
+}
+
+/* Responsive adjustments for h1 elements */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.5rem; /* Adjusted font size for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Adjusted font size for small screens */
+        margin-bottom: 15px; /* Reduced margin for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Smaller font size for very small screens */
+        margin-bottom: 10px; /* Further reduced margin */
+    }
+}
+
 /* =======================================
    Footer Responsiveness
    ======================================= */
