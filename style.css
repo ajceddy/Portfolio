@@ -60,6 +60,16 @@ body.dark-mode nav ul li a {
     font-family: Cascadia Code,
 }
 
+body.dark-mode .body-image p{
+
+    color: chartreuse;
+}
+
+body.dark-mode .card-container p{
+
+    color: chartreuse;
+
+}
 
 /* Footer styles in dark mode */
 body.dark-mode footer {
@@ -179,160 +189,6 @@ div button:hover{
     margin-left: 5px; /* Space between icon and label */
 }
 
-/* Responsive styles for mobile view */
-.checkbtn {
-    display: none; /* Hidden by default */
-}
-
-/* =======================================
-   Global Styles for Mobile Responsiveness
-   ======================================= */
-
-/* Adjust background gradient size for mobile */
-@media (max-width: 768px) {
-    .gradient {
-        --size: 500px; /* Reduce size of gradient for smaller screens */
-    }
-
-    /* Mobile navigation button (hamburger icon) */
-    .checkbtn {
-        display: block;          /* Show hamburger icon on mobile */
-        color: white;            /* White color for the button */
-        font-size: 30px;         /* Large font size for visibility */
-    }
-
-    /* Hide navigation menu by default on mobile */
-    nav ul {
-        display: none;           /* Hide navigation items */
-        position: absolute;      /* Absolute positioning to overlay the page */
-        top: 70px;               /* Position below the header */
-        right: 0;                /* Align to the right */
-        background-color: rgba(6, 71, 54, 0.9); /* Semi-transparent background */
-        width: 100%;             /* Full width menu */
-        text-align: center;      /* Center-align menu items */
-        flex-direction: column;  /* Stack navigation items vertically */
-    }
-
-    /* Show navigation when hamburger is clicked */
-    #check:checked ~ ul {
-        display: block;          /* Display navigation on checkbox click */
-    }
-
-    /* Styling for individual navigation items */
-    nav ul li {
-        list-style: none;        /* Remove bullet points */
-        margin: 20px 0;          /* Add vertical spacing between items */
-    }
-
-    /* Reduce heading font size on smaller screens */
-    h1 {
-        font-size: 1.8rem;       /* Smaller font size for mobile */
-    }
-}
-
-/* =======================================
-   Main Div and Content Responsiveness
-   ======================================= */
-
-/* Make maindiv content responsive for mobile */
-@media (max-width: 768px) {
-    .maindiv {
-        display: flex;                /* Use flexbox for responsive layout */
-        flex-direction: column;       /* Stack elements vertically */
-        align-items: center;          /* Center content horizontally */
-        margin: 10px;                 /* Add margin around the container */
-    }
-}
-
-/* Responsive styles for <h1> elements */
-h1 {
-    font-size: 3rem; /* Default font size for h1 */
-    line-height: 1.2; /* Line height for better readability */
-    text-align: center; /* Center align the h1 */
-    margin-bottom: 20px; /* Margin below h1 */
-}
-
-/* Responsive adjustments for h1 elements */
-@media (max-width: 1200px) {
-    h1 {
-        font-size: 2rem; /* Adjusted font size for medium screens */
-    }
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.5rem; /* Adjusted font size for small screens */
-        margin-bottom: 15px; /* Reduced margin for smaller screens */
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1rem; /* Smaller font size for very small screens */
-        margin-bottom: 10px; /* Further reduced margin */
-    }
-}
-
-/* =======================================
-   Footer Responsiveness
-   ======================================= */
-
-/* Make footer sections stack vertically on mobile */
-@media (max-width: 768px) {
-    .footer .container {
-        display: flex;                /* Flexbox layout for the footer */
-        flex-direction: column;       /* Stack footer sections vertically */
-        flex-wrap: wrap;
-        align-items: center;          /* Center-align footer content */
-        padding: 20px;                /* Add padding around the footer */
-    }
-
-    /* Footer Contact Section: Stack above form on mobile */
-    .footer-contact {
-        width: 100%;                  /* Full width for the contact section */
-        text-align: center;            /* Center-align text */
-        margin-bottom: 20px;           /* Add space below for separation */
-    }
-
-    /* Footer Form Section: Positioned below contact section on mobile */
-    .footer-form {
-        width: 100%;                  /* Full width for the form */
-        text-align: center;            /* Center-align form content */
-        margin-bottom: 20px;           /* Add space below for separation */
-    }
-}
-
-/* =======================================
-   Contact Form Responsiveness
-   ======================================= */
-
-/* Make contact container stack vertically on mobile */
-@media (max-width: 768px) {
-    .contact-container {
-        display: flex;                /* Flexbox layout for contact section */
-        flex-direction: column;       /* Stack contact details and form vertically */
-        align-items: center;          /* Center-align the content */
-    }
-
-    /* Style for individual contact info and form sections */
-    .contact-info, .contact-form {
-        width: 100%;                  /* Full width for both sections */
-        text-align: center;            /* Center-align text */
-        margin-bottom: 20px;           /* Add spacing below each section */
-    }
-}
-
-/* =======================================
-   Small Screen (Max-width: 480px)
-   ======================================= */
-
-/* Further adjustments for very small screens */
-@media (max-width: 480px) {
-    .maindiv {
-        margin: 5px;                  /* Reduce margin for tiny screens */
-        padding: 10px;                /* Add padding for content */
-    }
-}
 
 
 /* Main content styles */
@@ -350,60 +206,78 @@ h1 {
 .titlediv1 {
     background: none; /* No background for the title container */
     text-align: center; /* Centers the title text horizontally */
-    margin-bottom: 40px; /* No margin below the title container, since we'll control spacing with the text */
- 
+    margin-bottom: 40px; /* Space below the title container */
+}
+
+/* Responsive styling for the main title (h1) */
+.titlediv1 h1 {
+    font-size: calc(2rem + 1vw); /* Responsive font size: larger on bigger screens */
+    margin-bottom: 40px; /* Space below the title */
+    line-height: 1.2; /* Adjust line height for better readability */
+}
+
+/* Responsive styling for paragraph (p) inside the title container */
+.titlediv1 p {
+    background: none; /* No background for the paragraph */
+    text-align: center; /* Centers the text */
+    margin-bottom: 20px; /* Adds space below the paragraph */
+    color: white; /* White text for contrast */
+    padding-top: 20px; /* Adds padding above the paragraph */
+    margin-top: 30px; /* Adds space between the title and paragraph */
+    font-size: calc(1rem + 0.5vw); /* Responsive font size for the paragraph */
 }
 
 /* Title styles */
 .titleh1 {
     background: none; /* No background for the title */
-    font-size: 5rem; /* Large font size for the title */
+    font-size: calc(2rem + 1vw); /* Responsive font size for the main title */
     color: #064636; /* Dark green color for the title text */
     font-family: 'Sixtyfour Convergence', sans-serif; /* Custom font for the title */
-    font-weight: bold; /* Makes the title text bold */
-    z-index: 2; /* Ensures the title appears above the background image */
-    position: relative; /* Places the title at the top of the image */
-    top: 20px; /* Positions the title 20px from the top of the container */
-    left: 50%; /* Centers the title horizontally */
-    transform: translateX(-50%); /* Corrects horizontal centering, since left: 50% centers from the left edge */
+    font-weight: bold; /* Bold title */
+    z-index: 2; /* Places title above background */
+    position: relative; /* Relative positioning to allow top and left offsets */
+    top: 20px; /* Position title 20px from the top of the container */
+    left: 50%; /* Horizontally centers the title */
+    transform: translateX(-50%); /* Ensures perfect horizontal centering */
+    padding-top: 30px; /* Adds padding at the top of the title */
 }
 
-/* Image container styles (used as background image) */
+/* Image container styles (background image section) */
 .body-image {
-    background-image: url('AdobeStock_373478211.jpg'); /* Sets the image as the background */
-    background-size: cover; /* Ensures the image covers the entire container without stretching */
-    background-position: center; /* Centers the image within the container */
-    position: relative; /* Allows absolute positioning of text and title inside */
-    width: 100%; /* Makes the container full width */
-    height: 960px; /* Sets the height of the container */
-    border-radius: 10px; /* Adds rounded corners to the image */
-    z-index: 1; /* Ensures the image stays behind the text and title */
+    background-image: url('AdobeStock_373478211.jpg'); /* Background image */
+    background-size: cover; /* Make image cover the entire container */
+    background-position: center; /* Center the background image */
+    position: relative; /* Allows absolute positioning for text elements */
+    width: 100%; /* Full width container */
+    height: 960px; /* Set a fixed height */
+    border-radius: 10px; /* Rounded corners */
+    z-index: 1; /* Ensures image stays behind the text */
 }
 
 /* Body text styles */
 .body-text {
-    position: absolute; /* Positions the text absolutely over the image */
-    font-size: 2.5em; /* Sets the text to slightly larger than normal */
-    color: white; /* Sets the text color to white for contrast over the image */
-    text-align: center; /* Centers the text horizontally */
-    margin: 0 20px; /* Adds left and right padding to keep the text away from the edges */
-    padding: 15%;
-    line-height: 1.8; /* Increases line height for readability */
-    z-index: 2; /* Ensures the text appears above the background image */
-    max-width: auto; /* Restricts the width of the text for better readability */
-    top: 50%; /* Vertically centers the text, keeping it flexible */
-    transform: translateY(-50%); /* Adjusts the position to properly center text */
+    position: absolute; /* Absolute positioning over the image */
+    font-size: calc(1.5rem + 1vw); /* Responsive text size for the body text */
+    color: white; /* White text for contrast */
+    text-align: center; /* Centers text */
+    margin: 0 20px; /* Adds left and right margin */
+    padding: 15%; /* Adds padding around the text */
+    line-height: 1.8; /* Sets line height for readability */
+    z-index: 2; /* Ensures text appears above the image */
+    max-width: 100%; /* Ensure the text doesn’t go beyond the container */
+    top: 50%; /* Vertically centers the text */
+    transform: translateY(-50%); /* Corrects vertical centering */
 }
 
-/* Specific style for body text in the index page */
+/* Specific styling for body text in the index page */
 #body-text-index {
-    background: none; /* No background for the text container */
-    font-size: 1.1em; /* Slightly larger text */
-    color: white; /* Sets the text color to white */
-    text-align: center; /* Centers the text horizontally */
-    line-height: 1.8; /* Adds more space between lines for readability */
-    width: 100%; /* Full width for the text container */
-    margin-top: 20px; /* Ensures the text starts 20px below the title */
+    background: none; /* No background for text */
+    font-size: calc(1rem + 0.5vw); /* Responsive font size */
+    color: white; /* White text color */
+    text-align: center; /* Centers the text */
+    line-height: 1.8; /* Adjust line height for readability */
+    width: 100%; /* Full width text container */
+    margin-top: 20px; /* Adds space above the text */
 }
 
 /* Card layout styles */
@@ -421,7 +295,8 @@ h1 {
     overflow: hidden; /* Hide overflow */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
-    text-align: center;
+    text-align: center; /* Centers the text horizontally */
+
 }
 
 .card:hover {
@@ -439,7 +314,7 @@ h1 {
 /* Card text styles */
 .cardtext {
     padding: 20px; /* Padding around text */
-   
+    font-size: 1rem;
 }
 
 /* Footer styling */
@@ -628,3 +503,200 @@ h1 {
     background-color: #ff4500;
 }
 
+/* Responsive styles for mobile view */
+.checkbtn {
+    display: none; /* Hidden by default */
+}
+
+
+
+
+/* =======================================
+   Global Styles for Mobile Responsiveness
+   ======================================= */
+
+/* Adjust background gradient size for mobile screens */
+@media (max-width: 768px) {
+    /* Reduce size of gradient for smaller screens */
+    .gradient {
+        --size: 500px; 
+    }
+
+    /* Mobile navigation button (hamburger icon) */
+    .checkbtn {
+        display: block;           /* Show the icon only on mobile screens */
+        background: url('bright_mode.svg'); /* Set default to bright mode icon */
+        background-size: contain; /* Ensure icon fits within the button */
+        background-repeat: no-repeat; /* Prevent icon repetition */
+        background-position: center; /* Center the icon within the button */
+        width: 40px;              /* Set width for the icon */
+        height: 40px;             /* Set height for the icon */
+        border: none;             /* Remove the default border */
+        cursor: pointer;          /* Change cursor to pointer for better UX */
+    }
+
+    /* Dark mode icon - changes when body has dark-mode class */
+    body.dark-mode .checkbtn {
+        background: url('dark_mode.svg'); /* Change icon to dark mode */
+    }
+
+    /* Hide navigation menu by default on mobile */
+    nav ul {
+        display: none;            /* Keep navigation hidden initially */
+        position: absolute;       /* Position the menu absolutely on the page */
+        top: 70px;                /* Set position below the header */
+        right: 0;                 /* Align the menu to the right of the screen */
+        background-color: rgba(6, 71, 54, 0.9); /* Semi-transparent background */
+        width: 100%;              /* Full-width dropdown for mobile view */
+        text-align: center;       /* Center-align all menu items */
+        flex-direction: column;   /* Stack menu items vertically */
+    }
+
+    /* Show navigation when hamburger icon (checkbox) is clicked */
+    #check:checked ~ ul {
+        display: block;           /* Display the navigation menu */
+    }
+
+    /* Custom Hamburger icon - shown when navigation is hidden */
+    .checkbtn::before {
+        content: url('https://www.vectorstock.com/royalty-free-vector/hamburger-menu-button-flat-icon-on-a-transparent-vector-33677808');
+        /* Use the provided vector image as the hamburger menu icon */
+    }
+
+    /* Styling for each navigation item */
+    nav ul li {
+        list-style: none;         /* Remove default bullet points from list */
+        margin: 20px 0;           /* Add space between each menu item */
+    }
+
+    /* Reduce heading font size on smaller screens */
+    h1 {
+        font-size: 1.2rem;        /* Adjust font size to fit smaller screens */
+    }
+}
+
+/* =======================================
+   Main Div and Content Responsiveness
+   ======================================= */
+
+/* Make maindiv content responsive for mobile */
+@media (max-width: 768px) {
+    .maindiv {
+        display: flex;                /* Use flexbox for responsive layout */
+        flex-direction: column;       /* Stack elements vertically */
+        align-items: center;          /* Center content horizontally */
+        margin: 10px;                 /* Add margin around the container */
+    }
+}
+
+
+
+
+
+
+
+
+/* General styling for the body-image section */
+/* Responsive design for tablets and smaller devices */
+@media (max-width: 768px) {
+    .body-image {
+        height: 600px; /* Adjust container height for smaller screens */
+    }
+
+    .titleh1 {
+        font-size: calc(1.8rem + 1vw); /* Slightly reduce font size for the title */
+        padding-top: 20px; /* Adjust padding */
+    }
+
+    .body-text {
+        font-size: calc(1.2rem + 1vw); /* Adjust font size for body text */
+        padding: 10%; /* Reduce padding */
+    }
+}
+
+/* Responsive design for smartphones and very small devices */
+@media (max-width: 480px) {
+    .body-image {
+        height: 400px; /* Reduce container height for small screens */
+    }
+
+    .titleh1 {
+        font-size: calc(1.5rem + 1vw); /* Further reduce font size for smaller screens */
+        padding-top: 10px; /* Further reduce padding */
+    }
+
+    .body-text {
+        font-size: calc(1rem + 0.5vw); /* Smaller font size for body text */
+        padding: 5%; /* Reduce padding to fit text better */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* =======================================
+   Footer Responsiveness
+   ======================================= */
+
+/* Make footer sections stack vertically on mobile */
+@media (max-width: 768px) {
+    .footer .container {
+        display: flex;                /* Flexbox layout for the footer */
+        flex-direction: column;       /* Stack footer sections vertically */
+        flex-wrap: wrap;              /* Allow items to wrap within the footer */
+        align-items: center;          /* Center-align footer content */
+        padding: 20px;                /* Add padding around the footer */
+    }
+
+    /* Footer Contact Section: Stack above form on mobile */
+    .footer-contact {
+        width: 100%;                  /* Full width for the contact section */
+        text-align: center;            /* Center-align text */
+        margin-bottom: 20px;           /* Add space below for separation */
+    }
+
+    /* Footer Form Section: Positioned below contact section on mobile */
+    .footer-form {
+        width: 100%;                  /* Full width for the form */
+        text-align: center;            /* Center-align form content */
+        margin-bottom: 20px;           /* Add space below for separation */
+    }
+}
+
+/* =======================================
+   Contact Form Responsiveness
+   ======================================= */
+
+/* Make contact container stack vertically on mobile */
+@media (max-width: 768px) {
+    .contact-container {
+        display: flex;                /* Flexbox layout for contact section */
+        flex-direction: column;       /* Stack contact details and form vertically */
+        align-items: center;          /* Center-align the content */
+    }
+
+    /* Style for individual contact info and form sections */
+    .contact-info, .contact-form {
+        width: 100%;                  /* Full width for both sections */
+        text-align: center;            /* Center-align text */
+        margin-bottom: 20px;           /* Add spacing below each section */
+    }
+}
+
+/* =======================================
+   Small Screen (Max-width: 480px)
+   ======================================= */
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .maindiv {
+        margin: 5px;                  /* Reduce margin for very small screens */
+        padding: 10px;                /* Add padding for content */
+    }
+}
