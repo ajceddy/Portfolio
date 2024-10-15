@@ -617,16 +617,16 @@ div button:hover{
 /* Responsive design for smartphones and very small devices */
 @media (max-width: 480px) {
     .body-image {
-        height: 400px; /* Reduce container height for small screens */
+        height: 500px; /* Reduce container height for small screens */
     }
 
     .titleh1 {
-        font-size: calc(1rem + 0.5vw); /* Further reduce font size for smaller screens */
+        font-size: 1.5rem; /* Further reduce font size for smaller screens */
         padding-top: 10px; /* Further reduce padding */
     }
 
     .body-text {
-        font-size: calc(1rem + 0.5vw); /* Smaller font size for body text */
+        font-size: 1rem; /* Smaller font size for body text */
         padding: 5%; /* Reduce padding to fit text better */
     }
 }
