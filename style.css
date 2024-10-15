@@ -184,87 +184,197 @@ div button:hover{
     display: none; /* Hidden by default */
 }
 
+/* =======================================
+   Global Styles for Mobile Responsiveness
+   ======================================= */
+
+/* Adjust background gradient size for mobile */
 @media (max-width: 768px) {
     .gradient {
-        --size: 500px; /* Adjust size for mobile */
+        --size: 500px; /* Reduce size of gradient for smaller screens */
     }
+
+    /* Mobile navigation button (hamburger icon) */
     .checkbtn {
-        display: block; /* Show on mobile */
-        color: white; /* White color for the button */
-        font-size: 30px; /* Large font size */
+        display: block;          /* Show hamburger icon on mobile */
+        color: white;            /* White color for the button */
+        font-size: 30px;         /* Large font size for visibility */
     }
+
+    /* Hide navigation menu by default on mobile */
     nav ul {
-        display: none; /* Hide navigation by default */
-        position: absolute; /* Absolute positioning */
-        top: 70px; /* Below the header */
-        right: 0; /* Align to the right */
+        display: none;           /* Hide navigation items */
+        position: absolute;      /* Absolute positioning to overlay the page */
+        top: 70px;               /* Position below the header */
+        right: 0;                /* Align to the right */
         background-color: rgba(6, 71, 54, 0.9); /* Semi-transparent background */
-        width: 100%; /* Full width */
-        text-align: center; /* Center align items */
-        flex-direction: column; /* Stack items vertically */
+        width: 100%;             /* Full width menu */
+        text-align: center;      /* Center-align menu items */
+        flex-direction: column;  /* Stack navigation items vertically */
     }
 
+    /* Show navigation when hamburger is clicked */
     #check:checked ~ ul {
-        display: block; /* Show navigation when checkbox is checked */
+        display: block;          /* Display navigation on checkbox click */
     }
 
+    /* Styling for individual navigation items */
     nav ul li {
-        list-style: none;
-        margin: 20px 0; /* Vertical spacing for stacked items */
+        list-style: none;        /* Remove bullet points */
+        margin: 20px 0;          /* Add vertical spacing between items */
     }
 
+    /* Reduce heading font size on smaller screens */
     h1 {
-        font-size: 1.8rem; /* Smaller font size for smaller screens */
+        font-size: 1.8rem;       /* Smaller font size for mobile */
     }
 }
+
+/* =======================================
+   Main Div and Content Responsiveness
+   ======================================= */
+
+/* Make maindiv content responsive for mobile */
+@media (max-width: 768px) {
+    .maindiv {
+        display: flex;                /* Use flexbox for responsive layout */
+        flex-direction: column;       /* Stack elements vertically */
+        align-items: center;          /* Center content horizontally */
+        margin: 10px;                 /* Add margin around the container */
+    }
+}
+
+/* =======================================
+   Footer Responsiveness
+   ======================================= */
+
+/* Make footer sections stack vertically on mobile */
+@media (max-width: 768px) {
+    .footer .container {
+        display: flex;                /* Flexbox layout for the footer */
+        flex-direction: column;       /* Stack footer sections vertically */
+        flex-wrap: wrap;
+        align-items: center;          /* Center-align footer content */
+        padding: 20px;                /* Add padding around the footer */
+    }
+
+    /* Footer Contact Section: Stack above form on mobile */
+    .footer-contact {
+        width: 100%;                  /* Full width for the contact section */
+        text-align: center;            /* Center-align text */
+        margin-bottom: 20px;           /* Add space below for separation */
+    }
+
+    /* Footer Form Section: Positioned below contact section on mobile */
+    .footer-form {
+        width: 100%;                  /* Full width for the form */
+        text-align: center;            /* Center-align form content */
+        margin-bottom: 20px;           /* Add space below for separation */
+    }
+}
+
+/* =======================================
+   Contact Form Responsiveness
+   ======================================= */
+
+/* Make contact container stack vertically on mobile */
+@media (max-width: 768px) {
+    .contact-container {
+        display: flex;                /* Flexbox layout for contact section */
+        flex-direction: column;       /* Stack contact details and form vertically */
+        align-items: center;          /* Center-align the content */
+    }
+
+    /* Style for individual contact info and form sections */
+    .contact-info, .contact-form {
+        width: 100%;                  /* Full width for both sections */
+        text-align: center;            /* Center-align text */
+        margin-bottom: 20px;           /* Add spacing below each section */
+    }
+}
+
+/* =======================================
+   Small Screen (Max-width: 480px)
+   ======================================= */
+
+/* Further adjustments for very small screens */
+@media (max-width: 480px) {
+    .maindiv {
+        margin: 5px;                  /* Reduce margin for tiny screens */
+        padding: 10px;                /* Add padding for content */
+    }
+}
+
 
 /* Main content styles */
 .maindiv {
-    color: rgb(6, 11, 1);
-    position: relative; /* Ensure stacking order */
-    z-index: 1; /* Higher than the gradient */
-    max-width: 1600px;  /*Max width for large screens */
-    margin-top: 5px; /* Top margin of 5px */
-    margin-left: auto; /* Center alignment */
-    margin-right: auto; /* Center alignment */
-    margin-bottom: 40px; /* Bottom margin of 40px */
-    padding: 20px; /* Padding inside the main div */
-    background-color: white; /* white background */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    color: rgb(6, 11, 1); /* Text color */
+    z-index: 1; /* Ensures content stays above the background gradient if any */
+    max-width: 1600px;  /* Limits the width of the content on large screens */
+    margin: auto; /* Centers the div horizontally */
+    margin-top: 20px; /* Adds space above the content */
+    margin-bottom: 40px; /* Adds space below the content */
+    align-items: center; /* Aligns items in the center vertically */
 }
-
 
 /* Title container styles */
 .titlediv1 {
-    text-align: center; /* Center align text */
-    margin-bottom: 30px; /* Spacing below title */
+    background: none; /* No background for the title container */
+    text-align: center; /* Centers the title text horizontally */
+    margin-bottom: 40px; /* No margin below the title container, since we'll control spacing with the text */
+ 
 }
 
 /* Title styles */
 .titleh1 {
-    font: size 5rem; /* Large title size */
-    color: #064636; /* Dark green color */
-    font-family: 'Sixtyfour Convergence', sans-serif; /* Custom font */
-    font-weight: bold; /* Bold text */
+    background: none; /* No background for the title */
+    font-size: 5rem; /* Large font size for the title */
+    color: #064636; /* Dark green color for the title text */
+    font-family: 'Sixtyfour Convergence', sans-serif; /* Custom font for the title */
+    font-weight: bold; /* Makes the title text bold */
+    z-index: 2; /* Ensures the title appears above the background image */
+    position: relative; /* Places the title at the top of the image */
+    top: 20px; /* Positions the title 20px from the top of the container */
+    left: 50%; /* Centers the title horizontally */
+    transform: translateX(-50%); /* Corrects horizontal centering, since left: 50% centers from the left edge */
 }
 
-/* Image styles */
+/* Image container styles (used as background image) */
 .body-image {
-    background-image: url(AdobeStock_373478211.jpg);
-    width: 100%; /* Full width */
-    height: 960px; /* Maintain aspect ratio */
-    border-radius: 10px; /* Rounded corners */
-    margin-bottom: 20px; /* Spacing below image */
+    background-image: url('AdobeStock_373478211.jpg'); /* Sets the image as the background */
+    background-size: cover; /* Ensures the image covers the entire container without stretching */
+    background-position: center; /* Centers the image within the container */
+    position: relative; /* Allows absolute positioning of text and title inside */
+    width: 100%; /* Makes the container full width */
+    height: 960px; /* Sets the height of the container */
+    border-radius: 10px; /* Adds rounded corners to the image */
+    z-index: 1; /* Ensures the image stays behind the text and title */
 }
 
 /* Body text styles */
 .body-text {
+    position: absolute; /* Positions the text absolutely over the image */
+    font-size: 2.5em; /* Sets the text to slightly larger than normal */
+    color: white; /* Sets the text color to white for contrast over the image */
+    text-align: center; /* Centers the text horizontally */
+    margin: 0 20px; /* Adds left and right padding to keep the text away from the edges */
+    padding: 15%;
+    line-height: 1.8; /* Increases line height for readability */
+    z-index: 2; /* Ensures the text appears above the background image */
+    max-width: auto; /* Restricts the width of the text for better readability */
+    top: 50%; /* Vertically centers the text, keeping it flexible */
+    transform: translateY(-50%); /* Adjusts the position to properly center text */
+}
+
+/* Specific style for body text in the index page */
+#body-text-index {
+    background: none; /* No background for the text container */
     font-size: 1.1em; /* Slightly larger text */
-    color:white; /* Default text color */
-    text-align: center; /* Center align text */
-    margin-bottom: 40px; /* Spacing below text */
-    line-height: 1.8; /* Increased line height for readability */
+    color: white; /* Sets the text color to white */
+    text-align: center; /* Centers the text horizontally */
+    line-height: 1.8; /* Adds more space between lines for readability */
+    width: 100%; /* Full width for the text container */
+    margin-top: 20px; /* Ensures the text starts 20px below the title */
 }
 
 /* Card layout styles */
@@ -400,23 +510,6 @@ div button:hover{
     color: #bbb;
 }
 
-/* Responsive styling */
-@media (max-width: 768px) {
-    .footer .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-contact, .footer-form {
-        width: 100%;
-        text-align: center;
-    }
-
-    .footer-contact p {
-        margin-bottom: 15px;
-    }
-}
-
 /* Contact section styling */
 .contact-section {
     padding: 60px 20px;
@@ -506,14 +599,3 @@ div button:hover{
     background-color: #ff4500;
 }
 
-/* Responsive Contact Section */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-    }
-
-    .contact-info, .contact-form {
-        width: 100%;
-        margin-bottom: 40px;
-    }
-}
