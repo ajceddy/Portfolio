@@ -557,19 +557,20 @@ div button:hover{
     }
 }
 
+
+
+
+
+
+
+
+
 /* =======================================
    Main Div and Content Responsiveness
    ======================================= */
 
 /* Make maindiv content responsive for mobile */
 @media (max-width: 768px) {
-    body{background-image: none;
-    background-color: royalblue;
-    margin-right: 5px;
-    margin-left: 5px;
-    width: auto;
-    }
-}
 
     .maindiv {
         display: flex;                /* Use flexbox for responsive layout */
@@ -577,13 +578,7 @@ div button:hover{
         align-items: center;          /* Center content horizontally */
         margin: 10px;                 /* Add margin around the container */
         
-    }
-}
-
-
-
-
-
+    }    
 
 
 
@@ -591,16 +586,16 @@ div button:hover{
 /* Responsive design for tablets and smaller devices */
 @media (max-width: 768px) {
     .body-image {
-        height: 600px; /* Adjust container height for smaller screens */
+        height: auto; /* Adjust container height for smaller screens */
     }
 
-    h1 .titleh1{
-        font-size: calc(1.5rem + 1vw); /* Slightly reduce font size for the title */
+    h1.titleh1 {
+        font-size: 2rem; /* Slightly reduce font size for the title */
         padding-top: 20px; /* Adjust padding */
     }
 
-    .body-image-p{
-        font-size: calc(1.1rem + 1vw); /* Slightly reduce font size for the title */
+    p.body-image-p {
+        font-size: 1.5; /* Slightly reduce font size for the title */
         padding-top: 20px; /* Adjust padding */
     }
 
@@ -612,25 +607,22 @@ div button:hover{
 
 /* Responsive design for smartphones and very small devices */
 @media (max-width: 480px) {
-    body{background-image: none;}
+
     .body-image {
-        height: 500px; /* Reduce container height for small screens */
+        height: auto; /* Reduce container height for small screens */
     }
 
-    h1 .titleh1 {
-        font-size: 1rem; /* Further reduce font size for smaller screens */
+    h1.titleh1 {
+        font-size: 1.5rem; /* Further reduce font size for smaller screens */
         padding-top: 10px; /* Further reduce padding */
     }
 
 
-    .body-image-p {
+    p.body-image-p {
         font-size: calc(0.5rem + 1vw); /* Slightly reduce font size for the title */
         padding-top: 20px; /* Adjust padding */
     }
-    .body-text {
-        font-size: 0.5rem; /* Smaller font size for body text */
-        padding: 5%; /* Reduce padding to fit text better */
-    }
+ 
 }
 
 
