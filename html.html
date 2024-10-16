@@ -3,43 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assy J-C EDDY</title>
+    <title>HTML - Assy J-C EDDY</title>
 
-    <!-- Link to external CSS file -->
+    <!-- Meta description for SEO (improves search engine ranking) -->
+    <meta name="description" content="Assy Jean-Claude Eddy, Full-Stack Software Developer offering web, mobile, and custom software development solutions. Explore my portfolio.">
+
+    <!-- Link to external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Link Favicon with correct type -->
+    <!-- Favicon for the site (32x32 for optimal resolution in most browsers) -->
     <link rel="icon" type="image/png" href="favicon-32x32.png">
 
-    <!-- Font Awesome for icons -->
+    <!-- Font Awesome for icons (used in the contact section for icons like phone and email) -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-    <!-- Google Fonts -->
+    <!-- Preconnect to Google Fonts for faster loading -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts for custom font usage -->
     <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Background gradient -->
+    <!-- Background gradient effect for aesthetic appeal -->
     <div class="gradient"></div>
 
-    <!-- Header section -->
+    <!-- Header section that contains the logo and navigation -->
     <header>
         <div class="container">
-            <!-- Header content: logo, navigation, and dark mode toggle -->
             <header class="header-container">
+                <!-- Logo with a link back to the home page -->
                 <label for="check" class="logo"><a href="index.html">AJC EDDY</a></label>
                 <nav>
+                    <!-- Navigation menu links -->
                     <ul class="menu">
                         <li><a href="downloadcv.html">Download CV</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
-                    <!-- Dark Mode Toggle -->
+                    <!-- Dark Mode Toggle switch -->
                     <div class="theme-toggle">
-                            <i class="fas fa-moon">
-                                <input type="checkbox" id="theme-switch">
-                                <label for="theme-switch" class="toggle-label" aria-label="Toggle dark mode">
-                            </i> Dark Mode
+                        <input type="checkbox" id="theme-switch">
+                        <label for="theme-switch" class="toggle-label" aria-label="Toggle dark mode">
+                            <!-- Font Awesome icon for moon (dark mode indicator) -->
+                            <i class="fas fa-moon"></i> Dark Mode
                         </label>
                     </div>
                 </nav>
@@ -47,52 +54,39 @@
         </div>
     </header>
 
-    <!-- Main Content Section -->
+    <!-- Main content container -->
     <div class="maindiv">
 
-        <!-- Main container for the image, title, and text section -->
-<div class="body-image">
-    <!-- Title container -->
-    <div class="titlediv1">
-        <!-- Main title of the page -->
-        <h1 class="titleh1">Assy J-C EDDY's <br> SOFTWARE DEVELOPER</h1> 
+        <!-- Container for the hero section (title and introduction) -->
+        <div class="body-image">
+            <div class="titlediv1">
+                <!-- Main title (developer name and title) -->
+                <h1 class="titleh1">HTML</h1>
+
+                <!-- Short introduction about the developer -->
+                <p class="body-image-p">
+                    Skilled in building scalable, high-performance applications. With expertise in front-end (React, Angular, Vue) and back-end (Node.js, Python/Django), I deliver solutions for modern business needs. <br>
+                    <br>
+                    I combine technical skills with a focus on design and user experience to create impactful results. Check out my portfolio to see how I’ve helped clients achieve their goals.
+                </p>
+                <!-- Spacer line for aesthetics -->
+                <br>
+            </div>
+        </div>
+
     </div>
-    
-    <!-- Body text section -->
-    <div class="body-text" id="body-text-index">
-        <!-- First paragraph introducing the developer -->
-        <p>
-            I’m Assy Jean-Claude Eddy, a Full-Stack Software Developer skilled in building innovative, scalable, and high-performance applications. With expertise in both front-end (React, Angular, Vue) and back-end development (Node.js, Python/Django), I deliver solutions that meet modern business needs. Whether it’s web, mobile, or custom software, I blend technical expertise with a focus on design and user experience to create impactful results.
-            <br>
-            <br>
-            Check out my portfolio to see how I’ve helped clients achieve their goals. Let’s bring your vision to life.
-        </p>
-        
-        <!-- Line break to add spacing at the bottom of the section -->
-        <br>
-    </div>
-</div>
-            
-    </div>
+
+    <!-- Section for core skills (with cards for each skill) -->
     <div>
 
         <!-- Core Skills Section -->
         <div class="titlediv1">
-            <h1 class="titleh1">Core Skills</h1>
+            <h1 class="titleh1">Other <br>Core Skills</h1>
         </div> 
 
         <!-- Card container for skills -->
         <div class="card-container">
 
-            <!-- Individual skill card - HTML -->
-            <div class="card card1">
-                <img src="1.jpg" alt="HTML skills image" loading="lazy">
-                <div class="cardtext cardtext1">
-                    <h1>HTML</h1>
-                    <p>As a proficient software developer, I possess a strong command of HTML (Hypertext Markup Language), the backbone of web development. I excel in crafting semantic, accessible, and responsive web pages that enhance user experience across various devices. My expertise includes:</p>
-                </div>
-                <a href="html.html" target="_blank" rel="noopener noreferrer"><button class="read-more">Read more</button></a>
-            </div>
 
             <!-- Individual skill card - CSS -->
             <div class="card card2">
@@ -178,21 +172,20 @@
 
     <!-- Footer Section -->
     <footer class="footer">
-        <div class="container">
-            <!-- Footer Contact Details -->
-            <div class="footer-contact">
-                <h2>Contact Me</h2>
-                <p><strong>Name:</strong> Assy Jean-Claude EDDY</p>
-                <p><strong>Phone:</strong> +44 7 42 42 42 793</p>
-                <p><strong>Email:</strong> <a href="mailto:ajceddy@gmail.com">ajceddy@gmail.com</a></p>
-                <!-- Elfsight Widget for additional contact options -->
-                <script src="https://static.elfsight.com/platform/platform.js" async></script>
-                <div class="elfsight-app-10d3ab95-1a10-405e-a13c-2d31a8f231d9" data-elfsight-app-lazy></div>
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Contact Details</h2>
+                <p><i class="fas fa-user"></i> <strong>Name:</strong> Assy Jean-Claude EDDY</p>
+                <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +44 7 42 42 42 793</p>
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:ajceddy@gmail.com">ajceddy@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Wolverhampton, United Kingdom</p>
+                
             </div>
 
-            <!-- Footer Contact Form -->
-            <div class="footer-form">
-                <h2>Get In Touch</h2>
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send a Message</h2>
                 <form action="#" method="POST">
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
@@ -201,7 +194,7 @@
                         <input type="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
@@ -215,30 +208,23 @@
     </footer>
 
     <!-- Script for dark mode functionality -->
-        <!-- JavaScript to handle dark mode toggle and persistence across sessions -->
     <script>
-        // Get reference to the dark mode toggle checkbox
         const themeSwitch = document.getElementById('theme-switch');
-
-        // Add an event listener to the toggle checkbox
+        // Add event listener for the dark mode toggle
         themeSwitch.addEventListener('change', () => {
-            // Toggle the dark-mode class on the body element
-            document.body.classList.toggle('dark-mode');
-
-            // Store the theme preference in localStorage for future visits
-            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+            document.body.classList.toggle('dark-mode'); // Toggle dark mode class
+            // Save the theme preference to local storage
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light'); 
         });
 
-        // On page load, check if there's a saved theme preference in localStorage
+        // Load the preferred theme on page load
         window.onload = () => {
             const savedTheme = localStorage.getItem('theme');
-            // If the saved theme is 'dark', apply the dark mode class and check the toggle
             if (savedTheme === 'dark') {
-                document.body.classList.add('dark-mode');
-                themeSwitch.checked = true;
+                document.body.classList.add('dark-mode'); // Apply dark mode if saved
+                themeSwitch.checked = true; // Check the toggle
             }
         };
-    </script>
     </script>
 
 </body>
