@@ -629,14 +629,14 @@ div button:hover{
     }
 
     h1.titleh1 {
-        font-size: 1.5rem; /* Further reduce font size for smaller screens */
-        padding-top: 10px; /* Further reduce padding */
+        font-size: 1.1rem; /* Further reduce font size for smaller screens */
+        padding-top: 5px; /* Further reduce padding */
     }
 
 
     p.body-image-p {
         font-size: 1; /* Slightly reduce font size for the title */
-        padding-top: 20px; /* Adjust padding */
+        padding-top: 10px; /* Adjust padding */
     }
  
 }
