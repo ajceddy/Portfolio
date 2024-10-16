@@ -609,17 +609,18 @@ div button:hover{
     }
 
     .body-image {
-        height: auto; /* Reduce container height for small screens */
+        height: 750px; /* Reduce container height for small screens */
+        margin-bottom: 30px;
     }
 
     h1.titleh1 {
-        font-size: 1rem; /* Further reduce font size for smaller screens */
+        font-size: 1.5rem; /* Further reduce font size for smaller screens */
         padding-top: 10px; /* Further reduce padding */
     }
 
 
     p.body-image-p {
-        font-size: calc(0.5rem + 1vw); /* Slightly reduce font size for the title */
+        font-size: 1; /* Slightly reduce font size for the title */
         padding-top: 20px; /* Adjust padding */
     }
  
