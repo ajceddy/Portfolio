@@ -620,22 +620,22 @@ div button:hover{
 
     .maindiv {
         margin: 5px;                  /* Reduce margin for very small screens */
-        padding: 10px;                /* Add padding for content */
+        padding: 5px;                /* Add padding for content */
     }
 
     .body-image {
         height: 750px; /* Reduce container height for small screens */
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 
     h1.titleh1 {
-        font-size: 1.1rem; /* Further reduce font size for smaller screens */
+        font-size: 1rem; /* Further reduce font size for smaller screens */
         padding-top: 5px; /* Further reduce padding */
     }
 
 
     p.body-image-p {
-        font-size: 1; /* Slightly reduce font size for the title */
+        font-size: 1rem; /* Slightly reduce font size for the title */
         padding-top: 10px; /* Adjust padding */
     }
  
