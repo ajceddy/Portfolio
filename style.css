@@ -580,11 +580,6 @@ div button:hover{
         
     }    
 
-
-
-/* General styling for the body-image section */
-/* Responsive design for tablets and smaller devices */
-@media (max-width: 768px) {
     .body-image {
         height: auto; /* Adjust container height for smaller screens */
     }
@@ -608,12 +603,17 @@ div button:hover{
 /* Responsive design for smartphones and very small devices */
 @media (max-width: 480px) {
 
+    .maindiv {
+        margin: 5px;                  /* Reduce margin for very small screens */
+        padding: 10px;                /* Add padding for content */
+    }
+
     .body-image {
         height: auto; /* Reduce container height for small screens */
     }
 
     h1.titleh1 {
-        font-size: 1.5rem; /* Further reduce font size for smaller screens */
+        font-size: 1rem; /* Further reduce font size for smaller screens */
         padding-top: 10px; /* Further reduce padding */
     }
 
@@ -683,14 +683,3 @@ div button:hover{
     }
 }
 
-/* =======================================
-   Small Screen (Max-width: 480px)
-   ======================================= */
-
-/* Further adjustments for very small screens */
-@media (max-width: 480px) {
-    .maindiv {
-        margin: 5px;                  /* Reduce margin for very small screens */
-        padding: 10px;                /* Add padding for content */
-    }
-}
