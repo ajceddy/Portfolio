@@ -8,39 +8,30 @@
 
 /* Body styles: Sets font, background, and positioning */
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: Cascadia Code; /* Sets a default font */
     line-height: 1.6; /* Increases readability */
     color: black; /* Default text color */
-    background: linear-gradient(to right, #071c39, #164e7a); /* Gradient background */
-    position: relative; /* Allows absolute positioning of child elements */
+    background: linear-gradient(to right, #103160 30%, #2270ab); /* Gradient background */
     overflow-y: auto; /* Allow vertical scrolling */
 }
 
 /* Global dark mode styles: Overrides styles for dark mode */
 body.dark-mode {
-    background: linear-gradient(to right, #1c1c1c, #333); /* Dark mode gradient */
+    background: linear-gradient(to right, #010d1f 30%, #001321); /* Gradient background */
     color: chartreuse; /* Light text color for contrast */
 }
 
 /* Header styles: Applies dark mode styles to the header */
 body.dark-mode header {
-    background-color: #111; /* Dark background for header */
-}
-
-body.dark-mode .body-text{
-
-    color: chartreuse;
-}
-
-body.dark-mode .body-text h1{
-
-    color:#ffa500;
+    background-color: #000010; /* Dark background for header */
 }
 
 body.dark-mode .maindiv{
     color: chartreuse; /* Light color for links */
-    background-color: #333;
-    font-family: Cascadia Code;    
+
 }
 
 /* Card styles in dark mode */
@@ -56,8 +47,8 @@ body.dark-mode .cardtext h1 {
 
 /* Navigation links in dark mode */
 body.dark-mode nav ul li a {
-    color: chartreuse; /* Light color for links */
-    font-family: Cascadia Code,
+    color: white; /* Light color for links */
+    font-family: Lora,
 }
 
 body.dark-mode .body-image p{
@@ -78,15 +69,6 @@ body.dark-mode footer {
    
 }
 
-/* Animation for rotation effect */
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg); /* Starting state */
-    }
-    100% {
-        transform: rotate(360deg); /* Ending state */
-    }
-}
 
 /* Gradient background for the main content */
 .gradient {
@@ -99,27 +81,25 @@ body.dark-mode footer {
     width: 100%; 
     height: 100%; 
     filter: blur(5px); /* Optional blur effect */
-    background-image: linear-gradient(hsl(222, 84, 60, 100%), hsl(164, 79, 71)); /* Gradient colors */
-    animation: rotate 50s cubic-bezier(0.8, 0.2, 0.2, 0.8) alternate infinite; /* Infinite rotation */
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; /* Non-uniform border radius */
 }
 
 /* Header styles */
 header {
     background-color: rgba(6, 71, 54, 0.9); /* Semi-transparent header */
-    padding: 10px 0; /* Vertical padding */
+    padding: 10px 10px; /* Vertical and horizontal padding */
     position: sticky; /* Stick to the top on scroll */
     top: 0; /* Positioning from the top */
     width: 100%; /* Full width */
     z-index: 1000; /* Ensure above other content */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 0 4px 8px rgba(27, 1, 1, 0.568); /* Soft shadow */
 }
 
 header a {text-decoration: none; }
 
 /* Header container: Center and space elements */
 .header-container {
-    max-width: 1200px; /* Max width for large screens */
+    max-width: 100%; /* Max width for large screens */
     margin: auto; /* Center horizontally */
     display: flex; /* Flexbox layout */
     justify-content: space-between; /* Space between items */
@@ -129,7 +109,7 @@ header a {text-decoration: none; }
 /* Logo styles */
 .logo {
     color: orange; /* Orange text color */
-    font-size: 30px; /* Large font size */
+    font-size: 20px; /* medium font size */
     font-family: 'Sixtyfour Convergence', sans-serif; /* Custom font */
 }
 
@@ -146,6 +126,7 @@ nav ul {
 
 nav ul li {
     margin-left: 20px; /* Spacing between navigation items */
+    font-family: Lora;  /* Custom font */
 }
 
 nav ul li a {
@@ -168,12 +149,11 @@ div button{
     margin: 5px 5px;
     transition: background-color 0.3s ease; /* Smooth background transition */
     border-radius: 5px; /* Rounded corners */
+
 }
 
 div button:hover{
     background-color: #ff7700; /* Highlight on hover */
-    align-items: center;
-
 }
 
 /* Theme toggle styles */
@@ -193,9 +173,8 @@ div button:hover{
 
 /* Main content styles */
 .maindiv {
-    color: rgb(6, 11, 1); /* Text color */
     z-index: 1; /* Ensures content stays above the background gradient if any */
-    max-width: 1600px;  /* Limits the width of the content on large screens */
+    max-width: 90%;  /* Limits the width of the content on large screens */
     margin: auto; /* Centers the div horizontally */
     margin-top: 20px; /* Adds space above the content */
     margin-bottom: 40px; /* Adds space below the content */
@@ -244,6 +223,7 @@ div button:hover{
 
 /* Image container styles (background image section) */
 .body-image {
+
     background-image: url('AdobeStock_373478211.jpg'); /* Background image */
     background-size: cover; /* Make image cover the entire container */
     background-position: center; /* Center the background image */
@@ -325,6 +305,7 @@ div button:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 
@@ -336,6 +317,7 @@ div button:hover{
     width: 100%;
     padding: 20px;
     flex-wrap: wrap;
+ 
 }
 
 .footer-contact, .footer-form {
@@ -519,7 +501,7 @@ div button:hover{
 @media (max-width: 768px) {
     /* Reduce size of gradient for smaller screens */
     .gradient {
-        --size: 500px; 
+        --size: 0px; 
     }
 
     /* Mobile navigation button (hamburger icon) */
@@ -581,11 +563,20 @@ div button:hover{
 
 /* Make maindiv content responsive for mobile */
 @media (max-width: 768px) {
+    body{background-image: none;
+    background-color: royalblue;
+    margin-right: 5px;
+    margin-left: 5px;
+    width: auto;
+    }
+}
+
     .maindiv {
         display: flex;                /* Use flexbox for responsive layout */
         flex-direction: column;       /* Stack elements vertically */
         align-items: center;          /* Center content horizontally */
         margin: 10px;                 /* Add margin around the container */
+        
     }
 }
 
@@ -603,8 +594,13 @@ div button:hover{
         height: 600px; /* Adjust container height for smaller screens */
     }
 
-    .titleh1 {
-        font-size: calc(1.8rem + 1vw); /* Slightly reduce font size for the title */
+    h1 .titleh1{
+        font-size: calc(1.5rem + 1vw); /* Slightly reduce font size for the title */
+        padding-top: 20px; /* Adjust padding */
+    }
+
+    .body-image-p{
+        font-size: calc(1.1rem + 1vw); /* Slightly reduce font size for the title */
         padding-top: 20px; /* Adjust padding */
     }
 
@@ -616,15 +612,21 @@ div button:hover{
 
 /* Responsive design for smartphones and very small devices */
 @media (max-width: 480px) {
+    body{background-image: none;}
     .body-image {
         height: 500px; /* Reduce container height for small screens */
     }
 
-    .titleh1 {
+    h1 .titleh1 {
         font-size: 1rem; /* Further reduce font size for smaller screens */
         padding-top: 10px; /* Further reduce padding */
     }
 
+
+    .body-image-p {
+        font-size: calc(0.5rem + 1vw); /* Slightly reduce font size for the title */
+        padding-top: 20px; /* Adjust padding */
+    }
     .body-text {
         font-size: 0.5rem; /* Smaller font size for body text */
         padding: 5%; /* Reduce padding to fit text better */
