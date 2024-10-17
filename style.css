@@ -117,7 +117,7 @@ header a {text-decoration: none; }
 /* Logo styles */
 .logo {
     color: orange; /* Orange text color */
-    font-size: 15px; /* medium font size */
+    font-size: 20px; /* medium font size */
     font-family: 'Sixtyfour Convergence', sans-serif; /* Custom font */
 }
 
@@ -274,6 +274,17 @@ div button:hover{
     align-items: center;
     color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* Card layout styles */
 .card-container {
@@ -570,6 +581,69 @@ div button:hover{
     h1 {
         font-size: 1.2rem;        /* Adjust font size to fit smaller screens */
     }
+
+
+
+
+
+
+
+    .off-set-menu{
+        
+        flex-direction: row;
+        background-color: rgb(34, 37, 49);
+        height: 100vh;
+        width: 100%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        right: -450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font: 2.5rem;
+        transition: .3s ease;
+    }
+
+    .off-screen-menu.active{
+        right: 0;
+    }
+
+
+    nav {
+        display: flex;
+        padding: 0.5rem;
+        display: flex;
+       
+    }
+
+
+    .ham-menu {
+        height: 50px;
+        width: 50px;
+        margin-left: auto;
+        position: relative;
+       
+    }
+
+
+
+
+    .ham-menu span {
+        height: 5px;
+        width: 100%;
+        background-color: orange;
+        border-radius: 25px;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s ease;
+    
+    }
+
 }
 
 
@@ -625,18 +699,18 @@ div button:hover{
 
     .body-image {
         height: 750px; /* Reduce container height for small screens */
-        margin-bottom: 25px;
+        margin-bottom: 30px;
     }
 
     h1.titleh1 {
         font-size: 1rem; /* Further reduce font size for smaller screens */
-        padding-top: 5px; /* Further reduce padding */
+        padding-top: 10px; /* Further reduce padding */
     }
 
 
     p.body-image-p {
         font-size: 1rem; /* Slightly reduce font size for the title */
-        padding-top: 10px; /* Adjust padding */
+        padding-top: 20px; /* Adjust padding */
     }
  
 }
@@ -666,36 +740,76 @@ div button:hover{
 
     /* Footer Contact Section: Stack above form on mobile */
     .footer-contact {
-        width: 100%;                  /* Full width for the contact section */
-        text-align: center;            /* Center-align text */
-        margin-bottom: 20px;           /* Add space below for separation */
-    }
+            width: 100%;                  /* Full width for the contact section */
+            text-align: center;            /* Center-align text */
+            margin-bottom: 20px;           /* Add space below for separation */
+        }
 
     /* Footer Form Section: Positioned below contact section on mobile */
     .footer-form {
         width: 100%;                  /* Full width for the form */
         text-align: center;            /* Center-align form content */
         margin-bottom: 20px;           /* Add space below for separation */
-    }
+        }
+
+    .contact-container {
+            display: flex;                /* Flexbox layout for contact section */
+            flex-direction: row;       /* Stack contact details and form vertically */
+            align-items: center;
+        }
+    
+    .contact-info, .contact-form {
+            width: 100%;                  /* Full width for both sections */
+            text-align: center;            /* Center-align text */
+            margin-bottom: 20px;           /* Add spacing below each section */
+        }
 }
 
 /* =======================================
    Contact Form Responsiveness
    ======================================= */
 
-/* Make contact container stack vertically on mobile */
-@media (max-width: 768px) {
+ /* Style for individual contact info and form sections */
+
+
+@media (max-width: 480px) {
+
+    .footer .container {
+        display: flex;                /* Flexbox layout for the footer */
+        flex-direction: column;       /* Stack footer sections vertically */
+        flex-wrap: wrap;              /* Allow items to wrap within the footer */
+        align-items: center;          /* Center-align footer content */
+        padding: 10px;                /* Add padding around the footer */
+    }
+
+    /* Footer Contact Section: Stack above form on mobile */
+    .footer-contact {
+            width: 100%;                  /* Full width for the contact section */
+            text-align: center;            /* Center-align text */
+            margin-bottom: 10px;           /* Add space below for separation */
+        }
+
+    /* Footer Form Section: Positioned below contact section on mobile */
+    .footer-form {
+        width: 100%;                  /* Full width for the form */
+        text-align: center;            /* Center-align form content */
+        margin-bottom: 20px;           /* Add space below for separation */
+        }
+
     .contact-container {
-        display: flex;                /* Flexbox layout for contact section */
-        flex-direction: column;       /* Stack contact details and form vertically */
-        align-items: center;          /* Center-align the content */
-    }
-
-    /* Style for individual contact info and form sections */
+            display: flex;                /* Flexbox layout for contact section */
+            flex-direction: row;       /* Stack contact details and form vertically */
+            align-items: center;
+        }
+    
     .contact-info, .contact-form {
-        width: 100%;                  /* Full width for both sections */
-        text-align: center;            /* Center-align text */
-        margin-bottom: 20px;           /* Add spacing below each section */
-    }
-}
+            width: 100%;                  /* Full width for both sections */
+            text-align: center;            /* Center-align text */
+            margin-bottom: 20px;           /* Add spacing below each section */
+        }
 
+    .footer p(
+        font-size: 1rem;
+    )
+
+}
