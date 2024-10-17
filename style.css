@@ -181,10 +181,11 @@ div button:hover{
 
 /* Main content styles */
 .maindiv {
-    
     z-index: 1; /* Ensures content stays above the background gradient if any */
     max-width: 90%;  /* Limits the width of the content on large screens */
-    margin: 20px; /* Centers the div horizontally */
+    margin: auto; /* Centers the div horizontally */
+    margin-top: 20px; /* Adds space above the content */
+    margin-bottom: 40px; /* Adds space below the content */
     align-items: center; /* Aligns items in the center vertically */
 }
 
