@@ -351,6 +351,7 @@ div button:hover{
     flex-direction: column; /* Arranges child elements in a vertical column */
     align-items: center; /* Centers child elements horizontally within the container */
     color: white; /* Sets the text color to white for visibility */
+    text-lign: justify; /* align text */
 }
 
 
