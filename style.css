@@ -353,7 +353,21 @@ div button:hover{
     color: white; /* Sets the text color to white for visibility */
 }
 
+section {
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+.cv-image {
+    width: 300px;
+
+
+}
 
 
 /* Card layout styles */
