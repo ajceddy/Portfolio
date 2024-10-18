@@ -8,7 +8,7 @@
 
 /* Body styles: Sets font, background, and positioning */
 body {
-    width: 100vh,
+    width: 100%,
     display: flex;
     flex-direction: column;
     align-items: center;
