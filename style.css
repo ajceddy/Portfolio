@@ -355,6 +355,15 @@ div button:hover{
 
 
 
+
+
+
+
+
+.dowmnload-section {
+    align-item: center;
+}
+
 section {
 
     display: flex;
@@ -362,6 +371,13 @@ section {
     justify-content: center;
     flex-wrap: wrap;
 }
+
+
+
+
+
+
+
 
 
 /* Card layout styles */
