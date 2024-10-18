@@ -353,21 +353,14 @@ div button:hover{
     color: white; /* Sets the text color to white for visibility */
 }
 
+
+
 section {
 
     display: flex;
-    width: 100%,
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-
-
-.cv-image {
-    width: 90vh;
-
-
 }
 
 
@@ -625,6 +618,11 @@ section {
     }
 }
 
+.cv-image {
+    width: 500px;
+
+
+}
 
 
 
@@ -696,20 +694,9 @@ section {
        
     }
 
-
-
-}
-
-
-
-
-
-/* =======================================
-   Main Div and Content Responsiveness
-   ======================================= */
-
-/* Make maindiv content responsive for mobile */
-@media (max-width: 768px) {
+    .cv-image {
+    width: 300px;
+        }
 
     .maindiv {
         display: flex;                /* Use flexbox for responsive layout */
@@ -737,7 +724,23 @@ section {
         font-size: calc(1.2rem + 1vw); /* Adjust font size for body text */
         padding: 10%; /* Reduce padding */
     }
+
+
+
 }
+
+
+
+
+
+/* =======================================
+   Main Div and Content Responsiveness
+   ======================================= */
+
+/* Make maindiv content responsive for mobile */
+@media (max-width: 768px) {
+
+    }
 
 /* Responsive design for smartphones and very small devices */
 @media (max-width: 480px) {
@@ -764,7 +767,11 @@ section {
     }
  
 }
+.cv-image {
+    width: 200px;
 
+
+}
 
 
 
