@@ -764,6 +764,7 @@ section {
     .maindiv {
         margin: 5px;                  /* Reduce margin for very small screens */
         padding: 5px;                /* Add padding for content */
+        width: 90%;                    /* use 90% of viewport */
     }
 
     .body-image {
