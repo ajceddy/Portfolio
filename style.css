@@ -55,27 +55,26 @@ body.dark-mode .cardtext h1 {
 
 /* Navigation links in dark mode */
 body.dark-mode nav ul li a {
-    color: white; /* Light color for links */
-    font-family: Lora,
+    color: white; /* Light color for links to ensure visibility on a dark background */
+    font-family: Lora; /* Consistent font style for navigation links */
 }
 
-body.dark-mode .body-image p{
-
-    color: chartreuse;
+/* Paragraph text within the main content area in dark mode */
+body.dark-mode .body-image p {
+    color: chartreuse; /* Bright green color for better readability and emphasis */
 }
 
-body.dark-mode .card-container p{
-
-    color: chartreuse;
-
+/* Paragraph text inside skill cards in dark mode */
+body.dark-mode .card-container p {
+    color: chartreuse; /* Bright green color for consistency across text elements */
 }
 
 /* Footer styles in dark mode */
 body.dark-mode footer {
-    background-color: #111; /* Dark footer background */
-    color: #e4e4e4; /* Light text color */
-   
+    background-color: #111; /* Dark background color for the footer to match dark mode theme */
+    color: #e4e4e4; /* Light text color for contrast and readability */
 }
+
 
 
 /* Gradient background for the main content */
@@ -137,17 +136,94 @@ nav ul li {
     font-family: Lora;  /* Custom font */
 }
 
+/* Styling for navigation links */
 nav ul li a {
     color: white; /* White text for links */
     text-transform: uppercase; /* Uppercase text */
-    padding: 10px 15px; /* Padding around links */
-    transition: background-color 0.3s ease; /* Smooth background transition */
-    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding around links to increase clickable area */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+    border-radius: 5px; /* Rounded corners for links */
 }
 
+/* Hover effect for navigation links */
 nav ul li a:hover {
-    background-color: #ff7700; /* Highlight on hover */
+    background-color: #ff7700; /* Orange background to highlight links on hover */
 }
+
+/* General styling for the hamburger menu button */
+.hamburger {
+    position: relative; /* Allows positioning of pseudo-elements */
+    display: block; /* Displays as a block-level element */
+    width: 60px; /* Width of the hamburger button */
+    cursor: pointer; /* Changes cursor to a pointer to indicate it's clickable */
+    appearance: none; /* Removes default styling (useful for button elements) */
+    background: none; /* No background color */
+    outline: none; /* No outline (prevents focus ring) */
+    border: none; /* No border */
+}
+
+/* Styling for the bars of the hamburger menu */
+.hamburger .bar, .hamburger:after, .hamburger:before {
+    content: ''; /* Empty content to create bars */
+    display: block; /* Displays as block-level elements */
+    width: 100%; /* Full width of the button */
+    height: 3px; /* Thickness of the bars */
+    background-color: white; /* White color for bars */
+    margin: 6px 0px; /* Spacing between the bars */
+    transition: 0.4s; /* Smooth transition for transformations */
+}
+
+/* Transformation to form the top bar of the cross (when active) */
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-5px, 3px); /* Rotates and moves to form the top diagonal */
+}
+
+/* Hides the middle bar when the hamburger is active (cross state) */
+.hamburger.is-active .bar {
+    opacity: 0; /* Makes the middle bar invisible */
+}
+
+/* Transformation to form the bottom bar of the cross (when active) */
+.hamburger.is-active:after {
+    transform: rotate(45deg) translate(-10px, -8px); /* Rotates and moves to form the bottom diagonal */
+}
+
+/* Styling for the mobile navigation menu */
+.mobile-nav {
+    display: block; /* Makes the mobile menu visible */
+    position: fixed; /* Stays in a fixed position relative to the viewport */
+    top: 0; /* Aligns to the top of the screen */
+    left: 100%; /* Positioned off-screen initially */
+    width: 100%; /* Full screen width */
+    min-height: 100vh; /* Minimum height of the viewport */
+    z-index: 98; /* Ensures the menu appears above other content */
+    background-color: #ddd7e5; /* Light background color for menu */
+    margin-top: 120px; /* Adds spacing from the top (for header space) */
+    transition: 0.4s; /* Smooth transition when toggling visibility */
+}
+
+/* Mobile navigation menu when active (visible) */
+.mobile-nav.is-active {
+    left: 0; /* Moves the menu into view */
+}
+
+/* Styling for links inside the mobile navigation menu */
+.mobile-nav a {
+    display: block; /* Each link is a block-level element */
+    text-align: center; /* Centers the text within the link */
+    width: 100%; /* Full width of the container */
+    max-width: 200px; /* Maximum width for better readability */
+    margin: 0 auto 16px; /* Centered and spaced vertically */
+    padding: 12px 16px; /* Padding for larger clickable area */
+    background-color: gray; /* Gray background for links */
+    color: white; /* White text color */
+}
+
+/* Hover effect for links in the mobile navigation menu */
+.mobile-nav a:hover {
+    background-color: #ff7700; /* Orange background to highlight links on hover */
+}
+
 
 div button{
     color: white; /* White text for links */
@@ -268,20 +344,13 @@ div button:hover{
     margin-top: 20px; /* Adds space above the text */
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
+/* Container class styles */
+.container {
+    display: flex; /* Enables flexbox layout for flexible positioning of child elements */
+    flex-direction: column; /* Arranges child elements in a vertical column */
+    align-items: center; /* Centers child elements horizontally within the container */
+    color: white; /* Sets the text color to white for visibility */
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -523,6 +592,26 @@ div button:hover{
    Global Styles for Mobile Responsiveness
    ======================================= */
 
+
+
+
+/* Media query to apply styles when the screen width is 768px or wider */
+@media (min-width: 768px) {
+
+    /* Hide the mobile navigation menu on larger screens */
+    .mobile-nav {
+        display: none;
+    }
+
+    /* Hide the hamburger menu button on larger screens */
+    .hamburger {
+        display: none;
+    }
+}
+
+
+
+
 /* Adjust background gradient size for mobile screens */
 @media (max-width: 768px) {
     /* Reduce size of gradient for smaller screens */
@@ -584,34 +673,6 @@ div button:hover{
 
 
 
-
-
-
-
-    .off-set-menu{
-        
-        flex-direction: row;
-        background-color: rgb(34, 37, 49);
-        height: 100vh;
-        width: 100%;
-        max-width: 450px;
-        position: fixed;
-        top: 0;
-        right: -450px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font: 2.5rem;
-        transition: .3s ease;
-    }
-
-    .off-screen-menu.active{
-        right: 0;
-    }
-
-
     nav {
         display: flex;
         padding: 0.5rem;
@@ -620,35 +681,8 @@ div button:hover{
     }
 
 
-    .ham-menu {
-        height: 50px;
-        width: 50px;
-        margin-left: auto;
-        position: relative;
-       
-    }
-
-
-
-
-    .ham-menu span {
-        height: 5px;
-        width: 100%;
-        background-color: orange;
-        border-radius: 25px;
-        position:absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: 0.3s ease;
-    
-    }
 
 }
-
-
-
-
 
 
 
@@ -714,11 +748,6 @@ div button:hover{
     }
  
 }
-
-
-
-
-
 
 
 
