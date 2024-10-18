@@ -356,7 +356,7 @@ div button:hover{
 section {
 
     display: flex;
-    width: 90%,
+    width: 100%,
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
@@ -365,7 +365,7 @@ section {
 
 
 .cv-image {
-    width: 300px;
+    width: 90vh;
 
 
 }
