@@ -245,6 +245,16 @@
                     themeSwitch.checked = true; // Check the toggle
                 }
             };
+
+            
+        // Load the preferred theme on page load
+        window.onload = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode'); // Apply dark mode if saved
+                themeSwitch.checked = true; // Check the toggle
+            }
+        };
         </script>
 
     </body>
