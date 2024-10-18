@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,62 +27,68 @@
     <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
+
+
+
 <body>
 
     <!-- Background gradient effect for aesthetic appeal -->
     <div class="gradient"></div>
 
-     <!-- Header section that contains the logo and navigation -->
+    <!-- Header section that contains the logo and navigation -->
     <header>
         <div class="container">
             <header class="header-container">
+
                 <!-- Logo with a link back to the home page -->
                 <label for="check" class="logo"><a href="index.html">AJC EDDY</a></label>
                 <nav>
+
                     <!-- Navigation menu links -->
                     <ul class="menu">
                         <li><a href="downloadcv.html">Download CV</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
+
                     <!-- Dark Mode Toggle switch -->
                     <div class="theme-toggle">
                         <input type="checkbox" id="theme-switch">
                         <label for="theme-switch" class="toggle-label" aria-label="Toggle dark mode">
-                            <!-- Font Awesome icon for moon (dark mode indicator) -->
                             <i class="fas fa-moon"></i> Dark Mode
                         </label>
+
                     </div>
                 </nav>
             </header>
         </div>
     </header>
 
+
+
     <!-- Main content container -->
     <div class="maindiv">
-
-        <!-- Container for the hero section (title and introduction) -->
+        <!-- Hero Section: Title and Introduction -->
         <div class="body-image">
             <div class="titlediv1">
                 <!-- Main title (developer name and title) -->
-                <h1 class="titleh1">Assy J-C EDDY<br>
-                    <br> SOFTWARE DEVELOPER</h1>
+                <h1 class="titleh1">Assy J-C EDDY<br><br> SOFTWARE DEVELOPER</h1>
 
                 <!-- Short introduction about the developer -->
                 <p class="body-image-p">
-                    Experienced software developer skilled in building scalable, high-performance applications across web, mobile, and custom software. Proficient in front-end (React, Angular, Vue) and back-end (Node.js, Python/Django) technologies, delivering modern, user-focused solutions. <br>
-                    <br>
+                    Experienced software developer skilled in building scalable, high-performance applications across web, mobile, and custom software. Proficient in front-end (React, Angular, Vue) and back-end (Node.js, Python/Django) technologies, delivering modern, user-focused solutions. <br><br>
                     Passionate about design, user experience, and helping clients achieve their goals. Explore my portfolio to see how I bring ideas to life.
                 </p>
                 <!-- Spacer line for aesthetics -->
                 <br>
             </div>
         </div>
-
     </div>
 
-    <!-- Section for core skills (with cards for each skill) -->
-    <div>
 
+
+
+    <!-- Section for Core Skills -->
+    <div>
         <!-- Core Skills Section -->
         <div class="titlediv1">
             <h1 class="titleh1">Core Skills</h1>
@@ -178,13 +187,11 @@
                 <a href="otherskills.html" target="_blank" rel="noopener noreferrer"><button class="read-more">Read more</button></a>
             </div>
         </div>
-    </div>    
+    </div>  
 
 
 
-    
-
-    <!-- Footer Section -->
+    <!-- Footer Section with Contact Details -->
     <footer class="footer">
         <div class="contact-container">
             <!-- Contact Information -->
@@ -194,7 +201,6 @@
                 <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +44 7 42 42 42 793</p>
                 <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:ajceddy@gmail.com">ajceddy@gmail.com</a></p>
                 <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Wolverhampton, United Kingdom</p>
-                
             </div>
 
             <!-- Contact Form -->
@@ -221,25 +227,28 @@
         </div>
     </footer>
 
-    <!-- Script for dark mode functionality -->
+    <!-- JavaScript for Dark Mode Functionality -->
     <script>
+        // Element references for theme toggle switch
         const themeSwitch = document.getElementById('theme-switch');
-        // Add event listener for the dark mode toggle
+
+        // Event listener for toggling dark mode
         themeSwitch.addEventListener('change', () => {
-            document.body.classList.toggle('dark-mode'); // Toggle dark mode class
-            // Save the theme preference to local storage
+            document.body.classList.toggle('dark-mode'); // Add/Remove dark mode class
+            // Save theme preference in local storage
             localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light'); 
         });
 
-        // Load the preferred theme on page load
+        // Load theme preference on page load
         window.onload = () => {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'dark') {
                 document.body.classList.add('dark-mode'); // Apply dark mode if saved
-                themeSwitch.checked = true; // Check the toggle
+                themeSwitch.checked = true; // Set switch to checked state
             }
         };
     </script>
 
 </body>
+
 </html>
