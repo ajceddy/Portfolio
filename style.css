@@ -356,7 +356,7 @@ div button:hover{
 section {
 
     display: flex;
-    width: 100vw,
+    width: 90%,
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
