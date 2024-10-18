@@ -69,74 +69,80 @@
             </div>
         </div>
 
-        <!-- Footer Section -->
-        <footer class="footer">
-            <div class="contact-container">
-                <!-- Contact Information -->
-                <div class="contact-info">
-                    <h2>Contact Details</h2>
-                    <p><i class="fas fa-user"></i> <strong>Name:</strong> Assy Jean-Claude EDDY</p>
-                    <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +44 7 42 42 42 793</p>
-                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:ajceddy@gmail.com">ajceddy@gmail.com</a></p>
-                    <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Wolverhampton, United Kingdom</p>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="contact-form">
-                    <h2>Send a Message</h2>
-                    <form action="#" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
+    <!-- Footer Section with Contact Details -->
+    <footer class="footer">
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <h2>Contact Details</h2>
+                <p><i class="fas fa-user"></i> <strong>Name:</strong> Assy Jean-Claude EDDY</p>
+                <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +44 7 42 42 42 793</p>
+                <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:ajceddy@gmail.com">ajceddy@gmail.com</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Wolverhampton, United Kingdom</p>
             </div>
 
-            <!-- Footer Bottom with copyright notice -->
-            <div class="footer-bottom">
-                <p>&copy; 2024 Assy Jean-Claude EDDY. All rights reserved.</p>
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h2>Send a Message</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
             </div>
-        </footer>
+        </div>
 
-        <!-- Script for dark mode functionality -->
-        <script>
-            const themeSwitch = document.getElementById('theme-switch');
-            // Add event listener for the dark mode toggle
-            themeSwitch.addEventListener('change', () => {
-                document.body.classList.toggle('dark-mode'); // Toggle dark mode class
-                // Save the theme preference to local storage
-                localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light'); 
-            });
+        <!-- Footer Bottom with copyright notice -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Assy Jean-Claude EDDY. All rights reserved.</p>
+        </div>
+    </footer>
 
-            // Load the preferred theme on page load
-            window.onload = () => {
-                const savedTheme = localStorage.getItem('theme');
-                if (savedTheme === 'dark') {
-                    document.body.classList.add('dark-mode'); // Apply dark mode if saved
-                    themeSwitch.checked = true; // Check the toggle
-                }
 
-                
-            // Select the hamburger button element
-            const hamburger = document.querySelector('.hamburger');
-            const mobile_menu = document.querySelector('.mobile-nav');
     
-            // Add an event listener for click events on the hamburger button
-            hamburger.addEventListener('click', () => {
-                // Toggle the 'is-active' class to switch between hamburger and cross states
-                hamburger.classList.toggle('is-active');
-                mobile_menu.classList.toggle('is-active');
-            });
 
+    <!-- JavaScript for Dark Mode Functionality -->
+    <script>
+        // Element references for theme toggle switch
+        const themeSwitch = document.getElementById('theme-switch');
 
-        </script>
+        // Event listener for toggling dark mode
+        themeSwitch.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode'); // Add/Remove dark mode class
+            // Save theme preference in local storage
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light'); 
+        });
 
-    </body>
+        // Load theme preference on page load
+        window.onload = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode'); // Apply dark mode if saved
+                themeSwitch.checked = true; // Set switch to checked state
+            }
+        };
+
+        // Select the hamburger button element
+        const hamburger = document.querySelector('.hamburger');
+        const mobile_menu = document.querySelector('.mobile-nav');
+
+        // Add an event listener for click events on the hamburger button
+        hamburger.addEventListener('click', () => {
+            // Toggle the 'is-active' class to switch between hamburger and cross states
+            hamburger.classList.toggle('is-active');
+            mobile_menu.classList.toggle('is-active');
+        });
+
+    </script>
+
+   
+</body>
+
 </html>
